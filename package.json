@@ -1,7 +1,8 @@
 {
   "name": "paas",
-  "displayName": "paas",
-  "description": "protect your ass as services",
+  "displayName": "PAAS",
+  "description": "protect ass as services",
+  "icon": "logo.jpeg",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -9,7 +10,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
