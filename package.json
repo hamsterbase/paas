@@ -4,6 +4,9 @@
   "description": "protect ass as services",
   "icon": "logo.jpeg",
   "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/hamsterbase/paas"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -14,23 +17,18 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "paas.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+  "contributes": {},
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "extension:release": "npm run compile && vsce package --no-dependencies"
   },
   "devDependencies": {
+    "@vscode/vsce": "^2.22.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@types/vscode": "^1.85.0",
